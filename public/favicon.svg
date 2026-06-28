@@ -1,0 +1,16 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ft-fav" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58aaff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#ft-fav)"/>
+  <rect x="1.6" y="1.6" width="36.8" height="36.8" rx="10.4" stroke="white" stroke-opacity="0.18" stroke-width="1.2"/>
+  <g stroke="#06121f" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M20 8 L31 14 L31 26 L20 32 L9 26 L9 14 Z"/>
+    <path d="M20 8 L20 20 L31 14"/>
+    <path d="M20 20 L20 32"/>
+    <path d="M20 20 L9 14"/>
+  </g>
+</svg>
