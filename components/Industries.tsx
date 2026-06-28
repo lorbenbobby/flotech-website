@@ -9,7 +9,7 @@ function IndustryCard({ item }: { item: IndustryItem }) {
     <RevealChild className="h-full">
       <article className="card group h-full">
         <div className="flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-hairline transition-transform duration-300 group-hover:scale-105">
             <Icon size={20} strokeWidth={1.8} />
           </span>
           <h3 className="text-base font-semibold text-ink">{item.title}</h3>

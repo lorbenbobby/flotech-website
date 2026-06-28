@@ -105,7 +105,7 @@ export function Hero() {
       </div>
 
       {/* Block ticker */}
-      <div className="relative mt-16 border-y border-white/5 bg-white/[0.015] py-3">
+      <div className="relative mt-16 border-y border-hairline bg-surface py-3">
         <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
           <div className="flex w-max animate-marquee gap-3 whitespace-nowrap will-change-transform">
             {[...TICKER, ...TICKER].map((t, i) => (

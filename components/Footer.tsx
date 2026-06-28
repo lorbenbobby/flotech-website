@@ -19,7 +19,7 @@ const COMPANY = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 py-14">
+    <footer className="relative border-t border-hairline py-14">
       <div className="container-x">
         <div className="grid gap-10 md:grid-cols-[1.6fr_1fr_1fr] lg:gap-16">
           {/* Brand */}

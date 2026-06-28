@@ -19,7 +19,7 @@ export function ContactSales() {
     <section id="pricing" className="relative py-20 sm:py-28">
       <div className="container-x">
         <Reveal>
-          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.015] px-6 py-12 text-center sm:px-12 sm:py-16">
+          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-hairline bg-gradient-to-b from-white/[0.06] to-white/[0.015] px-6 py-12 text-center sm:px-12 sm:py-16">
             <div
               aria-hidden
               className="glow-blob"

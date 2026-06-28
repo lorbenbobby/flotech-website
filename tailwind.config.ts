@@ -9,19 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Surfaces
-        bg: "#060912",
-        panel: "#0a1020",
-        elevated: "#0d1426",
-        line: "#1e2a45",
+        // Surfaces (theme tokens; see app/globals.css :root / .dark)
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        panel: "rgb(var(--panel) / <alpha-value>)",
+        elevated: "rgb(var(--elevated) / <alpha-value>)",
+        line: "var(--hairline)",
+        // Translucent surfaces that flip with the theme
+        surface: "var(--surface-1)",
+        surface2: "var(--surface-2)",
+        surfaceHover: "var(--surface-hover)",
+        hairline: "var(--hairline)",
         // Text
-        ink: "#eaf0fb",
-        muted: "#93a0bd",
-        faint: "#5d6a87",
-        // Brand
-        blue: "#3b6cff",
-        cyan: "#22d3ee",
-        violet: "#7c5cff",
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        faint: "rgb(var(--faint) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        // Brand (constant across themes)
+        blue: "rgb(var(--blue) / <alpha-value>)",
+        cyan: "rgb(var(--cyan) / <alpha-value>)",
+        violet: "rgb(var(--violet) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
