@@ -3,11 +3,12 @@ import { PROCESS } from "@/lib/content";
 import { SectionHeading } from "./Section";
 import { RevealGroup, RevealChild } from "./Reveal";
 
-export function Process() {
+export function Process({ hideHeading = false }: { hideHeading?: boolean } = {}) {
   return (
-    <section id="process" className="relative py-20 sm:py-28">
+    <section id="process" className={`relative ${hideHeading ? "pb-20 pt-2 sm:pb-28" : "py-20 sm:py-28"}`}>
       <div className="container-x">
         <SectionHeading
+          hidden={hideHeading}
           eyebrow="Process"
           title={
             <>

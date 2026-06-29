@@ -23,11 +23,12 @@ const LAYOUT = [
   "sm:col-span-2", // 8 wide
 ];
 
-export function UseCases() {
+export function UseCases({ hideHeading = false }: { hideHeading?: boolean } = {}) {
   return (
-    <section id="use-cases" className="relative py-20 sm:py-28">
+    <section id="use-cases" className={`relative ${hideHeading ? "pb-20 pt-2 sm:pb-28" : "py-20 sm:py-28"}`}>
       <div className="container-x">
         <SectionHeading
+          hidden={hideHeading}
           eyebrow="Use Cases"
           title={
             <>

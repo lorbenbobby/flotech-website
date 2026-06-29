@@ -11,24 +11,28 @@ const JOURNEY = [
   "Launch",
 ];
 
-export function About() {
+export function About({ hideHeading = false }: { hideHeading?: boolean } = {}) {
   return (
-    <section id="about" className="relative py-20 sm:py-28">
+    <section id="about" className={`relative ${hideHeading ? "pb-20 pt-2 sm:pb-28" : "py-20 sm:py-28"}`}>
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           {/* Left: copy */}
           <div>
-            <Reveal>
-              <span className="eyebrow">About FloTech</span>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h2 className="mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-[2.7rem]">
-                Blockchain as infrastructure,
-                <br className="hidden sm:block" /> not noise.
-              </h2>
-            </Reveal>
+            {!hideHeading && (
+              <>
+                <Reveal>
+                  <span className="eyebrow">About FloTech</span>
+                </Reveal>
+                <Reveal delay={0.05}>
+                  <h2 className="mt-4 text-3xl font-bold leading-[1.1] sm:text-4xl md:text-[2.7rem]">
+                    Blockchain as infrastructure,
+                    <br className="hidden sm:block" /> not noise.
+                  </h2>
+                </Reveal>
+              </>
+            )}
 
-            <div className="mt-6 space-y-5 text-[1.02rem] leading-relaxed text-muted">
+            <div className={`${hideHeading ? "" : "mt-6"} space-y-5 text-[1.02rem] leading-relaxed text-muted`}>
               <Reveal delay={0.1}>
                 <p>
                   Florian Technologies, publicly branded as FloTech, is a

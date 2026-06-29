@@ -3,11 +3,12 @@ import { TECH } from "@/lib/content";
 import { SectionHeading } from "./Section";
 import { Reveal } from "./Reveal";
 
-export function Technology() {
+export function Technology({ hideHeading = false }: { hideHeading?: boolean } = {}) {
   return (
-    <section id="technology" className="relative py-20 sm:py-28">
+    <section id="technology" className={`relative ${hideHeading ? "pb-20 pt-2 sm:pb-28" : "py-20 sm:py-28"}`}>
       <div className="container-x">
         <SectionHeading
+          hidden={hideHeading}
           eyebrow="Technology"
           title={
             <>
