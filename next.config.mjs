@@ -1,9 +1,9 @@
 // Where the site is served from.
+//   - Custom domain at the root (floriantechnologies.ca): "" (current), with
+//     public/CNAME present.
 //   - Free GitHub Pages project URL (https://<user>.github.io/flotech-website/):
-//     "/flotech-website" (current), and no public/CNAME.
-//   - Custom domain at the root (floriantechnologies.ca): set this to "" AND
-//     add public/CNAME containing floriantechnologies.ca.
-const BASE_PATH = "/flotech-website";
+//     set this to "/flotech-website" AND delete public/CNAME.
+const BASE_PATH = "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
