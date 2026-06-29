@@ -35,7 +35,7 @@ export function Photo({
         className="absolute inset-0 opacity-60"
         style={{
           background:
-            "radial-gradient(120% 90% at 100% 0%, rgba(34,211,238,0.18), transparent 55%), radial-gradient(120% 90% at 0% 100%, rgba(59,108,255,0.16), transparent 55%)",
+            "radial-gradient(120% 90% at 100% 0%, rgba(90, 140, 255,0.18), transparent 55%), radial-gradient(120% 90% at 0% 100%, rgba(59,108,255,0.16), transparent 55%)",
         }}
       />
 

@@ -26,7 +26,7 @@ export default function HomePage() {
             image={IMG.whiteboard}
             eyebrow="Why FloTech"
             title="We treat blockchain as infrastructure, not a buzzword."
-            lead="Most blockchain projects stall in the gap between idea and production. We close it — pressure-testing where a ledger earns its place, then designing, building, securing, and shipping the system around it."
+            lead="Most blockchain projects stall in the gap between idea and production. We close it, pressure-testing where a ledger earns its place, then designing, building, securing, and shipping the system around it."
             points={[
               "Strategy and architecture before a line of contract code",
               "Security review built into delivery, not bolted on after",

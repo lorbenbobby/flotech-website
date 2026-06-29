@@ -41,15 +41,15 @@ const config: Config = {
         xl2: "1.25rem",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(59,108,255,0.20), 0 0 40px -8px rgba(34,211,238,0.35)",
+        glow: "0 0 0 1px rgba(59,108,255,0.20), 0 0 40px -8px rgba(90, 140, 255,0.35)",
         card: "0 24px 60px -24px rgba(0,0,0,0.7)",
         ring: "0 0 0 1px rgba(255,255,255,0.06)",
       },
       backgroundImage: {
         "brand-gradient":
-          "linear-gradient(135deg, #3b6cff 0%, #22d3ee 100%)",
+          "linear-gradient(135deg, #3b6cff 0%, #5a8cff 100%)",
         "brand-soft":
-          "linear-gradient(135deg, rgba(59,108,255,0.16) 0%, rgba(34,211,238,0.16) 100%)",
+          "linear-gradient(135deg, rgba(59,108,255,0.16) 0%, rgba(90, 140, 255,0.16) 100%)",
         grid: "linear-gradient(to right, rgba(120,150,210,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(120,150,210,0.07) 1px, transparent 1px)",
       },
       keyframes: {

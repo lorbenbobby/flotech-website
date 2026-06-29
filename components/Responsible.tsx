@@ -18,7 +18,7 @@ export function Responsible() {
                 left: -80,
                 top: -120,
                 background:
-                  "radial-gradient(circle, rgba(34,211,238,0.16), transparent 70%)",
+                  "radial-gradient(circle, rgba(90, 140, 255,0.16), transparent 70%)",
               }}
             />
             <div
@@ -30,7 +30,7 @@ export function Responsible() {
                 right: -60,
                 bottom: -120,
                 background:
-                  "radial-gradient(circle, rgba(124,92,255,0.16), transparent 70%)",
+                  "radial-gradient(circle, rgba(59, 108, 255,0.16), transparent 70%)",
               }}
             />
 

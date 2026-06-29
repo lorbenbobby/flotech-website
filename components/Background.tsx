@@ -13,11 +13,6 @@ export function Background() {
       {/* deep base */}
       <div className="absolute inset-0 bg-bg" />
 
-      {/* panning grid, masked to fade toward edges */}
-      <div className="absolute inset-0 overflow-hidden [mask-image:radial-gradient(120%_85%_at_50%_0%,#000_55%,transparent_100%)]">
-        <div className="grid-bg animate-grid-pan absolute -inset-x-10 -top-10 bottom-0 h-[120%] opacity-70" />
-      </div>
-
       {/* ambient glows (softened automatically in light theme) */}
       <div style={{ opacity: "var(--glow-opacity)" }}>
         <div
@@ -39,7 +34,7 @@ export function Background() {
             top: 80,
             right: "-6%",
             background:
-              "radial-gradient(circle, rgba(34,211,238,0.22), transparent 65%)",
+              "radial-gradient(circle, rgba(90, 140, 255,0.22), transparent 65%)",
             animationDelay: "1.5s",
           }}
         />
@@ -51,7 +46,7 @@ export function Background() {
             bottom: -360,
             left: "30%",
             background:
-              "radial-gradient(circle, rgba(124,92,255,0.14), transparent 70%)",
+              "radial-gradient(circle, rgba(59, 108, 255,0.14), transparent 70%)",
           }}
         />
       </div>

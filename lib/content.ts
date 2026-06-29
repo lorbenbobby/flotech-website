@@ -34,7 +34,7 @@ import {
 
 /**
  * Mood imagery (professional stock photography, hotlinked from the Unsplash
- * CDN — allowed without an API key). Every usage runs through <Photo>, which
+ * CDN, allowed without an API key). Every usage runs through <Photo>, which
  * lays a dark brand gradient under and over the image, so the photos read as
  * cinematic, on-brand texture (not literal claims about FloTech's team or
  * clients) and degrade to a branded panel if a URL ever fails.

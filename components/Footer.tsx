@@ -81,13 +81,27 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-hairline pt-6 sm:flex-row sm:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-6 sm:flex-row sm:items-center">
           <p className="text-[0.82rem] text-faint">
             © 2026 Florian Technologies. All rights reserved.
           </p>
-          <p className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-faint">
-            Blockchain infrastructure · {SITE.location}
-          </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link
+              href="/privacy"
+              className="text-[0.82rem] text-faint transition-colors hover:text-ink"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-[0.82rem] text-faint transition-colors hover:text-ink"
+            >
+              Terms &amp; Conditions
+            </Link>
+            <span className="font-mono text-[0.72rem] uppercase tracking-[0.18em] text-faint">
+              {SITE.location}
+            </span>
+          </div>
         </div>
       </div>
     </footer>

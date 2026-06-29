@@ -15,7 +15,7 @@ function renderTitle(title: string, accent?: string): React.ReactNode {
 
 /**
  * Page-level header used at the top of each inner page. Gives every page its
- * own clear title, lead, and breathing room — the "real page" feel.
+ * own clear title, lead, and breathing room, the "real page" feel.
  */
 export function PageHero({
   eyebrow,

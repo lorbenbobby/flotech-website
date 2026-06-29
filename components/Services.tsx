@@ -46,7 +46,7 @@ export function Services({ hideHeading = false }: { hideHeading?: boolean } = {}
         {/* Core: blockchain */}
         <Reveal>
           <div className="mt-12 flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-cyan shadow-[0_0_12px_rgba(34,211,238,0.9)]" />
+            <span className="h-2 w-2 rounded-full bg-cyan shadow-[0_0_12px_rgba(90, 140, 255,0.9)]" />
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink/80">
               Core focus
             </span>

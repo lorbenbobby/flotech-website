@@ -5,8 +5,8 @@
 :root {
   /* Brand accents (constant across themes), as RGB channels for /alpha. */
   --blue: 59 108 255;
-  --cyan: 34 211 238;
-  --violet: 124 92 255;
+  --cyan: 90 140 255;
+  --violet: 59 108 255;
 
   --header-h: 72px;
 
@@ -17,7 +17,7 @@
   --ink: 17 24 39;
   --muted: 71 84 109;
   --faint: 130 142 163;
-  --accent: 8 145 178; /* deepened cyan for readable accent text on light */
+  --accent: 37 99 235; /* deepened cyan for readable accent text on light */
 
   --surface-1: rgba(15, 23, 42, 0.035);
   --surface-2: rgba(15, 23, 42, 0.06);
@@ -33,7 +33,7 @@
   --card-grad: linear-gradient(180deg, #ffffff 0%, #f6f8fc 100%);
   --card-border: rgba(15, 23, 42, 0.08);
   --card-shadow: 0 30px 60px -34px rgba(15, 35, 75, 0.28),
-    0 0 50px -20px rgba(34, 211, 238, 0.18);
+    0 0 50px -20px rgba(90, 140, 255, 0.18);
   --ghost-bg: rgba(15, 23, 42, 0.03);
   --ghost-border: rgba(15, 23, 42, 0.12);
   --ghost-hover: rgba(15, 23, 42, 0.06);
@@ -42,7 +42,7 @@
   --grid-line: rgba(70, 100, 160, 0.1);
   --glow-opacity: 0.45;
 
-  --selection-bg: rgba(34, 211, 238, 0.22);
+  --selection-bg: rgba(90, 140, 255, 0.22);
   --selection-fg: #06121f;
   --btn-text: #04121f;
 
@@ -60,7 +60,7 @@
   --ink: 234 240 251;
   --muted: 147 160 189;
   --faint: 93 106 135;
-  --accent: 34 211 238;
+  --accent: 90 140 255;
 
   --surface-1: rgba(255, 255, 255, 0.045);
   --surface-2: rgba(255, 255, 255, 0.06);
@@ -80,7 +80,7 @@
   );
   --card-border: rgba(255, 255, 255, 0.08);
   --card-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8),
-    0 0 50px -20px rgba(34, 211, 238, 0.4);
+    0 0 50px -20px rgba(90, 140, 255, 0.4);
   --ghost-bg: rgba(255, 255, 255, 0.03);
   --ghost-border: rgba(255, 255, 255, 0.12);
   --ghost-hover: rgba(255, 255, 255, 0.06);
@@ -89,7 +89,7 @@
   --grid-line: rgba(120, 150, 210, 0.06);
   --glow-opacity: 1;
 
-  --selection-bg: rgba(34, 211, 238, 0.28);
+  --selection-bg: rgba(90, 140, 255, 0.28);
   --selection-fg: #ffffff;
   --btn-text: #05080f;
 
@@ -176,7 +176,7 @@
 
   /* Gradient text */
   .text-gradient {
-    background: linear-gradient(135deg, #6f9bff 0%, #22d3ee 60%, #7c5cff 100%);
+    background: linear-gradient(135deg, #6f9bff 0%, #5a8cff 60%, #3b6cff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -196,12 +196,12 @@
   .btn-primary {
     @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-transform duration-200;
     color: var(--btn-text);
-    background-image: linear-gradient(135deg, #58aaff 0%, #22d3ee 100%);
-    box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.6);
+    background-image: linear-gradient(135deg, #58aaff 0%, #5a8cff 100%);
+    box-shadow: 0 10px 30px -10px rgba(90, 140, 255, 0.6);
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 40px -12px rgba(34, 211, 238, 0.75);
+    box-shadow: 0 16px 40px -12px rgba(90, 140, 255, 0.75);
   }
   .btn-primary:active {
     transform: translateY(0);
@@ -215,7 +215,7 @@
   }
   .btn-ghost:hover {
     background: var(--ghost-hover);
-    border-color: rgba(34, 211, 238, 0.45);
+    border-color: rgba(90, 140, 255, 0.45);
   }
 
   /* Card with animated glow border on hover */
@@ -230,7 +230,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(59, 108, 255, 0.6), rgba(34, 211, 238, 0.6));
+    background: linear-gradient(135deg, rgba(59, 108, 255, 0.6), rgba(90, 140, 255, 0.6));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;

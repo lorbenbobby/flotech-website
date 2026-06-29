@@ -43,7 +43,7 @@ export function LedgerVisual() {
         className="absolute left-1/2 top-1/2 -z-10 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(34,211,238,0.18), rgba(59,108,255,0.10) 45%, transparent 70%)",
+            "radial-gradient(circle, rgba(90, 140, 255,0.18), rgba(59,108,255,0.10) 45%, transparent 70%)",
           filter: "blur(8px)",
         }}
       />
@@ -58,11 +58,11 @@ export function LedgerVisual() {
         <defs>
           <linearGradient id="line-grad" x1="0" y1="0" x2="560" y2="480">
             <stop stopColor="#3b6cff" />
-            <stop offset="1" stopColor="#22d3ee" />
+            <stop offset="1" stopColor="#5a8cff" />
           </linearGradient>
           <radialGradient id="node-grad" cx="0.5" cy="0.5" r="0.5">
-            <stop stopColor="#9fe7ff" />
-            <stop offset="1" stopColor="#22d3ee" />
+            <stop stopColor="#b9d0ff" />
+            <stop offset="1" stopColor="#5a8cff" />
           </radialGradient>
           <filter id="soft-glow" x="-60%" y="-60%" width="220%" height="220%">
             <feGaussianBlur stdDeviation="6" result="b" />
@@ -137,7 +137,7 @@ export function LedgerVisual() {
               cx={n.x}
               cy={n.y}
               r={n.r + 5}
-              fill="#22d3ee"
+              fill="#5a8cff"
               initial={{ opacity: 0.18, scale: 1 }}
               animate={
                 reduce
@@ -184,7 +184,7 @@ export function LedgerVisual() {
             />
             {/* faceted block glyph */}
             <g
-              stroke="#22d3ee"
+              stroke="#5a8cff"
               strokeWidth={1.6}
               strokeLinejoin="round"
               fill="none"
