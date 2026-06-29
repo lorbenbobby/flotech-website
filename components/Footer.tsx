@@ -1,20 +1,21 @@
 import React from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { SITE } from "@/lib/content";
 import { Mail } from "lucide-react";
 
 const EXPLORE = [
-  { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
-  { label: "Process", href: "#process" },
-  { label: "Technology", href: "#technology" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Use Cases", href: "/use-cases" },
+  { label: "Process", href: "/process" },
+  { label: "Technology", href: "/technology" },
 ];
 
 const COMPANY = [
-  { label: "About", href: "#about" },
-  { label: "Use Cases", href: "#use-cases" },
-  { label: "Responsible Blockchain", href: "#responsible" },
+  { label: "About", href: "/about" },
+  { label: "Responsible Blockchain", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Footer() {
@@ -24,9 +25,9 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.6fr_1fr_1fr] lg:gap-16">
           {/* Brand */}
           <div>
-            <a href="#home" aria-label="FloTech home">
+            <Link href="/" aria-label="FloTech home">
               <Logo />
-            </a>
+            </Link>
             <p className="mt-5 max-w-sm text-[0.9rem] leading-relaxed text-muted">
               FloTech is the public brand of Florian Technologies, a Canadian
               blockchain technology and software consulting company based in
@@ -49,12 +50,12 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {EXPLORE.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="text-[0.92rem] text-muted transition-colors hover:text-ink"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -67,20 +68,20 @@ export function Footer() {
             </p>
             <ul className="mt-4 space-y-3">
               {COMPANY.map((l) => (
-                <li key={l.href}>
-                  <a
+                <li key={l.label}>
+                  <Link
                     href={l.href}
                     className="text-[0.92rem] text-muted transition-colors hover:text-ink"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/[0.06] pt-6 sm:flex-row sm:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-hairline pt-6 sm:flex-row sm:items-center">
           <p className="text-[0.82rem] text-faint">
             © 2026 Florian Technologies. All rights reserved.
           </p>

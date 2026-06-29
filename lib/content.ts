@@ -42,12 +42,90 @@ export const SITE = {
 };
 
 export const NAV: { label: string; href: string }[] = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Industries", href: "#industries" },
-  { label: "Process", href: "#process" },
-  { label: "Technology", href: "#technology" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Use Cases", href: "/use-cases" },
+  { label: "Process", href: "/process" },
+  { label: "Technology", href: "/technology" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+/** Per-page header + SEO copy. Keyed by route path. */
+export interface PageMeta {
+  eyebrow: string;
+  title: string;
+  /** Short lead shown under the page title. */
+  lead: string;
+  /** Longer meta description for SEO. */
+  description: string;
+}
+
+export const PAGE_META: Record<string, PageMeta> = {
+  services: {
+    eyebrow: "Services",
+    title: "Blockchain first. Then everything around it.",
+    lead: "Blockchain is the core of what we do, and software engineering rounds it out. Either way, the work is built to ship and to last.",
+    description:
+      "FloTech's services: blockchain consulting, smart contract development, tokenization infrastructure, Web3 platforms, blockchain integration, security reviews, and full-stack software delivery.",
+  },
+  industries: {
+    eyebrow: "Industries",
+    title: "Where blockchain earns its place.",
+    lead: "We work where verifiable records, automated rules, and shared trust solve a real problem. Here is what that looks like across sectors.",
+    description:
+      "How FloTech applies blockchain across healthcare, fintech, real estate, supply chain, SaaS, enterprise systems, digital identity, and asset management.",
+  },
+  "use-cases": {
+    eyebrow: "Use Cases",
+    title: "Real problems, solved on-chain.",
+    lead: "A blockchain is only worth it when it does something better. These are the patterns we build most, each tied to a concrete outcome.",
+    description:
+      "Common blockchain use cases FloTech builds: smart contract automation, tokenized assets, secure audit trails, wallet-connected platforms, loyalty currencies, consent and access control, digital identity, and enterprise integrations.",
+  },
+  process: {
+    eyebrow: "Process",
+    title: "From idea to working system.",
+    lead: "A clear path from first conversation to a platform that runs in production. Every step is deliberate, reviewable, and built to keep you in control.",
+    description:
+      "FloTech's delivery process: discover, design, architect, build, secure, launch, and support. A deliberate path from blockchain idea to production system.",
+  },
+  technology: {
+    eyebrow: "Technology",
+    title: "The full stack of digital trust.",
+    lead: "On-chain and off-chain, front to back. We assemble the right pieces for the job rather than forcing every problem onto a ledger.",
+    description:
+      "The FloTech technology stack: smart contracts, token standards, EVM networks, wallets, APIs, secure databases, cloud infrastructure, dashboards, identity, audit logs, and monitoring.",
+  },
+  about: {
+    eyebrow: "About",
+    title: "Blockchain as infrastructure, not noise.",
+    lead: "FloTech is the public brand of Florian Technologies, a Canadian blockchain technology and software consulting company.",
+    description:
+      "About FloTech (Florian Technologies): a Canadian blockchain technology and software consulting company turning smart contracts, tokenization, and digital trust into systems people can use.",
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Build the next layer of your digital infrastructure.",
+    lead: "Tell us what you want to build, integrate, tokenize, or secure. FloTech will help shape the technical path.",
+    description:
+      "Contact FloTech to discuss blockchain consulting, smart contracts, tokenization, Web3 platforms, integrations, or security reviews. Based in Ontario, Canada.",
+  },
+};
+
+/** Company story for the About page. */
+export const ABOUT_STORY: string[] = [
+  "Florian Technologies, publicly branded as FloTech, is a Canadian blockchain technology and software consulting company. We help companies move from a blockchain idea to architecture, prototype, implementation, security review, and launch.",
+  "Our focus is practical blockchain systems that connect with your existing software, data, users, wallets, and business workflows. The result is meant to run in production, not to sit in a slide deck.",
+  "We exist for teams that see blockchain as infrastructure. We turn smart contracts, tokenization, and digital trust systems into products people can actually use, and we stay through launch and the work that comes after it.",
+];
+
+/** Headline numbers for the About page. Conservative, framing-based, not invented metrics. */
+export const STATS: { value: string; label: string }[] = [
+  { value: "Blockchain-first", label: "Every engagement leads with the ledger" },
+  { value: "End-to-end", label: "Strategy through launch and support" },
+  { value: "Ontario, Canada", label: "Where we are based" },
 ];
 
 export interface ValueItem {

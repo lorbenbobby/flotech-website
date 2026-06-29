@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
@@ -8,18 +9,11 @@ import { Reveal } from "./Reveal";
 export function ContactSales() {
   const reduce = useReducedMotion();
 
-  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    document
-      .getElementById("contact")
-      ?.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
-  };
-
   return (
     <section id="pricing" className="relative py-20 sm:py-28">
       <div className="container-x">
         <Reveal>
-          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-hairline bg-gradient-to-b from-white/[0.06] to-white/[0.015] px-6 py-12 text-center sm:px-12 sm:py-16">
+          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-hairline bg-surface px-6 py-12 text-center sm:px-12 sm:py-16">
             <div
               aria-hidden
               className="glow-blob"
@@ -46,15 +40,15 @@ export function ContactSales() {
                 technical complexity.
               </p>
 
-              <motion.a
-                href="#contact"
-                onClick={scrollToContact}
+              <motion.div
                 whileHover={reduce ? undefined : { y: -2 }}
-                className="btn-primary mt-8"
+                className="mt-8 inline-block"
               >
-                Contact Sales
-                <ArrowRight size={16} />
-              </motion.a>
+                <Link href="/contact" className="btn-primary">
+                  Contact Sales
+                  <ArrowRight size={16} />
+                </Link>
+              </motion.div>
 
               <p className="mt-5 text-[0.85rem] text-faint">
                 No packages to pick from. Tell us the goal and the constraints,

@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE } from "@/lib/content";
 import { Background } from "@/components/Background";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: TITLE,
+  title: { default: TITLE, template: "%s | FloTech" },
   description: DESCRIPTION,
   applicationName: "FloTech",
   authors: [{ name: "Florian Technologies" }],
@@ -111,6 +112,7 @@ export default function RootLayout({
         <Background />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

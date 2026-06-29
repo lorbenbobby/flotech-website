@@ -7,13 +7,17 @@ export function SectionHeading({
   intro,
   align = "left",
   className = "",
+  hidden = false,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   intro?: React.ReactNode;
   align?: "left" | "center";
   className?: string;
+  /** When true the heading renders nothing (page supplies its own PageHero). */
+  hidden?: boolean;
 }) {
+  if (hidden) return null;
   const centered = align === "center";
   return (
     <div

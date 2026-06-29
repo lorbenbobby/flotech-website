@@ -24,14 +24,15 @@ function ServiceCard({ s }: { s: ServiceItem }) {
   );
 }
 
-export function Services() {
+export function Services({ hideHeading = false }: { hideHeading?: boolean } = {}) {
   const blockchain = SERVICES.filter((s) => s.group === "blockchain");
   const software = SERVICES.filter((s) => s.group === "software");
 
   return (
-    <section id="services" className="relative py-20 sm:py-28">
+    <section id="services" className={`relative ${hideHeading ? "pb-20 pt-2 sm:pb-28" : "py-20 sm:py-28"}`}>
       <div className="container-x">
         <SectionHeading
+          hidden={hideHeading}
           eyebrow="Services"
           title={
             <>
@@ -53,7 +54,7 @@ export function Services() {
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
               Blockchain
             </span>
-            <span className="ml-2 hidden h-px flex-1 bg-gradient-to-r from-white/10 to-transparent sm:block" />
+            <span className="ml-2 hidden h-px flex-1 bg-gradient-to-r from-hairline to-transparent sm:block" />
           </div>
         </Reveal>
 
@@ -74,7 +75,7 @@ export function Services() {
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
               Software engineering
             </span>
-            <span className="ml-2 hidden h-px flex-1 bg-gradient-to-r from-white/10 to-transparent sm:block" />
+            <span className="ml-2 hidden h-px flex-1 bg-gradient-to-r from-hairline to-transparent sm:block" />
           </div>
         </Reveal>
 

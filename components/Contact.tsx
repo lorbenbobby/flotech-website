@@ -11,7 +11,7 @@ const FIELD =
 const LABEL = "mb-2 block text-[0.85rem] font-medium text-ink/90";
 const REQ = <span className="text-cyan">*</span>;
 
-export function Contact() {
+export function Contact({ hideHeading = false }: { hideHeading?: boolean } = {}) {
   const reduce = useReducedMotion();
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
@@ -55,26 +55,30 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 sm:py-28">
+    <section id="contact" className={`relative ${hideHeading ? "pb-20 pt-2 sm:pb-28" : "py-20 sm:py-28"}`}>
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           {/* Left: invitation */}
           <div>
-            <Reveal>
-              <span className="eyebrow">Contact</span>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h2 className="mt-4 text-3xl font-bold leading-[1.12] sm:text-4xl md:text-[2.7rem]">
-                Build the next layer of your{" "}
-                <span className="text-gradient">digital infrastructure.</span>
-              </h2>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-5 max-w-md text-[1.02rem] leading-relaxed text-muted">
-                Tell us what you want to build, integrate, tokenize, or secure.
-                FloTech will help shape the technical path.
-              </p>
-            </Reveal>
+            {!hideHeading && (
+              <>
+                <Reveal>
+                  <span className="eyebrow">Contact</span>
+                </Reveal>
+                <Reveal delay={0.05}>
+                  <h2 className="mt-4 text-3xl font-bold leading-[1.12] sm:text-4xl md:text-[2.7rem]">
+                    Build the next layer of your{" "}
+                    <span className="text-gradient">digital infrastructure.</span>
+                  </h2>
+                </Reveal>
+                <Reveal delay={0.1}>
+                  <p className="mt-5 max-w-md text-[1.02rem] leading-relaxed text-muted">
+                    Tell us what you want to build, integrate, tokenize, or
+                    secure. FloTech will help shape the technical path.
+                  </p>
+                </Reveal>
+              </>
+            )}
 
             <Reveal delay={0.15}>
               <div className="mt-8 space-y-4">

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Boxes, ArrowRight, MessageSquare } from "lucide-react";
 import { LedgerVisual } from "./LedgerVisual";
@@ -73,14 +74,14 @@ export function Hero() {
               variants={item}
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
-              <a href="#contact" className="btn-primary">
+              <Link href="/contact" className="btn-primary">
                 Build With FloTech
                 <ArrowRight size={16} strokeWidth={2.5} />
-              </a>
-              <a href="#contact" className="btn-ghost">
+              </Link>
+              <Link href="/contact" className="btn-ghost">
                 <MessageSquare size={16} />
                 Discuss Your Blockchain Idea
-              </a>
+              </Link>
             </motion.div>
 
             <motion.p
@@ -97,7 +98,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: reduce ? 1 : 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: reduce ? 0 : 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
             <LedgerVisual />
           </motion.div>
