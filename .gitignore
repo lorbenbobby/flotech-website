@@ -8,9 +8,6 @@
 /.next/
 /out/
 
-# Generated at build time by scripts/generate-og.py
-/public/og.png
-
 # Production
 /build
 
