@@ -217,7 +217,7 @@ export function Contact() {
                           Select a project type
                         </option>
                         {PROJECT_TYPES.map((t) => (
-                          <option key={t} value={t} className="bg-[#0a1020] text-ink">
+                          <option key={t} value={t} className="bg-panel text-ink">
                             {t}
                           </option>
                         ))}
