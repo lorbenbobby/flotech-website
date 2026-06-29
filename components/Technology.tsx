@@ -26,7 +26,7 @@ export function Technology() {
                 return (
                   <div
                     key={item.title}
-                    className="group relative bg-[#0a1020] p-5 transition-colors duration-300 hover:bg-[#0d1426]"
+                    className="group relative bg-panel p-5 transition-colors duration-300 hover:bg-elevated"
                   >
                     <div className="flex items-start justify-between">
                       <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-hairline transition-transform duration-300 group-hover:scale-105">

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { MapPin, ArrowRight, MessageSquare } from "lucide-react";
+import { Boxes, ArrowRight, MessageSquare } from "lucide-react";
 import { LedgerVisual } from "./LedgerVisual";
 
 const TICKER = [
@@ -46,8 +46,8 @@ export function Hero() {
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.div variants={item}>
               <span className="glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs text-muted">
-                <MapPin size={13} className="text-cyan" />
-                Based in Ontario, Canada
+                <Boxes size={13} className="text-cyan" />
+                Blockchain technology &amp; software consulting
               </span>
             </motion.div>
 
