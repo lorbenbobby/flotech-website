@@ -16,7 +16,7 @@ export default function IndustriesPage() {
         image={IMG.office}
         eager
         kicker="Across sectors"
-        headline={<>Verifiable records, automated rules, and shared trust — applied to real work.</>}
+        headline={<>Verifiable records, automated rules, and shared trust, applied to real work.</>}
       />
       <Industries hideHeading />
       <ContactSales />

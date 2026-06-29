@@ -30,7 +30,7 @@ export function Process({ hideHeading = false }: { hideHeading?: boolean } = {})
             {PROCESS.map((step) => (
               <RevealChild key={step.n}>
                 <div className="group relative flex gap-5 sm:gap-7">
-                  <span className="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient font-mono text-base font-bold text-[#05080f] shadow-[0_8px_24px_-8px_rgba(34,211,238,0.6)] transition-transform duration-300 group-hover:scale-105">
+                  <span className="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient font-mono text-base font-bold text-[#05080f] shadow-[0_8px_24px_-8px_rgba(90, 140, 255,0.6)] transition-transform duration-300 group-hover:scale-105">
                     {step.n}
                   </span>
                   <div className="card flex-1 py-5">

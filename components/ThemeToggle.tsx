@@ -22,7 +22,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     try {
       localStorage.setItem("theme", next ? "dark" : "light");
     } catch {
-      /* storage unavailable — still toggles for the session */
+      /* storage unavailable, still toggles for the session */
     }
     setDark(next);
   }

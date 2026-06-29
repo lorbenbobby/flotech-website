@@ -41,7 +41,7 @@ export default function AboutPage() {
             image={IMG.meeting}
             eyebrow="How we work"
             title="Senior, hands-on, and accountable through launch."
-            lead="We work as a focused technical partner — close to your team, clear about trade-offs, and present from the first diagram to the day-two work after launch. The imagery here reflects the kind of technology consulting and delivery we do."
+            lead="We work as a focused technical partner, close to your team, clear about trade-offs, and present from the first diagram to the day-two work after launch. The imagery here reflects the kind of technology consulting and delivery we do."
             points={[
               "Architecture and security decisions made with you, not for you",
               "Plain-language documentation your team can own",

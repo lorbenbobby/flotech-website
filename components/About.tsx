@@ -68,7 +68,7 @@ export function About({ hideHeading = false }: { hideHeading?: boolean } = {}) {
                 className="absolute inset-0 rounded-2xl opacity-60"
                 style={{
                   background:
-                    "radial-gradient(120% 80% at 100% 0%, rgba(34,211,238,0.10), transparent 60%)",
+                    "radial-gradient(120% 80% at 100% 0%, rgba(90, 140, 255,0.10), transparent 60%)",
                 }}
               />
               <div className="relative">

@@ -20,7 +20,7 @@ export function LogoMark({
       <defs>
         <linearGradient id="ft-mark" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
           <stop stopColor="#58aaff" />
-          <stop offset="1" stopColor="#22d3ee" />
+          <stop offset="1" stopColor="#5a8cff" />
         </linearGradient>
       </defs>
       <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#ft-mark)" />
