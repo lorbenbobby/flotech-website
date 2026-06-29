@@ -10,7 +10,7 @@ export function ContactSales() {
   const reduce = useReducedMotion();
 
   return (
-    <section id="pricing" className="relative py-20 sm:py-28">
+    <section id="pricing" className="relative pb-20 pt-8 sm:pb-28 sm:pt-10">
       <div className="container-x">
         <Reveal>
           <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-hairline bg-surface px-6 py-12 text-center sm:px-12 sm:py-16">

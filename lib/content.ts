@@ -32,6 +32,42 @@ import {
   Sparkles,
 } from "lucide-react";
 
+/**
+ * Mood imagery (professional stock photography, hotlinked from the Unsplash
+ * CDN — allowed without an API key). Every usage runs through <Photo>, which
+ * lays a dark brand gradient under and over the image, so the photos read as
+ * cinematic, on-brand texture (not literal claims about FloTech's team or
+ * clients) and degrade to a branded panel if a URL ever fails.
+ *
+ * To swap any image, change only the `src` here.
+ */
+const U = (id: string, w = 1400) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=70`;
+
+export interface Img {
+  src: string;
+  alt: string;
+}
+
+export const IMG: Record<string, Img> = {
+  heroTeam: { src: U("1522071820081-009f0129c71c"), alt: "A technology team collaborating around laptops in a modern office" },
+  collaborate: { src: U("1600880292203-757bb62b4baf"), alt: "Colleagues working together at a laptop in a bright workspace" },
+  developer: { src: U("1498050108023-c5249f4df085"), alt: "A software developer writing code on a laptop" },
+  code: { src: U("1461749280684-dccba630e2f6"), alt: "Source code on a monitor in a darkened room" },
+  whiteboard: { src: U("1542744173-8e7e53415bb0"), alt: "A team planning system architecture at a whiteboard" },
+  meeting: { src: U("1517245386807-bb43f82c33c4"), alt: "Professionals reviewing work together on a laptop" },
+  strategy: { src: U("1556761175-b413da4baf72"), alt: "A strategy session around a table with laptops and notes" },
+  security: { src: U("1558494949-ef010cbdcc31"), alt: "Rows of servers in a data centre" },
+  infra: { src: U("1451187580459-43490279c0fa"), alt: "Abstract global network and cloud infrastructure" },
+  monitoring: { src: U("1551288049-bebda4e38f71"), alt: "Analytics dashboards displayed on a screen" },
+  office: { src: U("1497366216548-37526070297c"), alt: "A modern, dark technology office workspace" },
+  finance: { src: U("1454165804606-c3d57bc86b40"), alt: "Financial data and analytics on screens" },
+  healthcare: { src: U("1576091160550-2173dba999ef"), alt: "A healthcare professional using a tablet device" },
+  building: { src: U("1486406146926-c627a92ad1ab"), alt: "Modern corporate office towers" },
+  logistics: { src: U("1553413077-190dd305871c"), alt: "Supply-chain and logistics warehouse operations" },
+  identity: { src: U("1563013544-824ae1b704d3"), alt: "A person using a secure device" },
+};
+
 export const SITE = {
   brand: "FloTech",
   legal: "Florian Technologies",
