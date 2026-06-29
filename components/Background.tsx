@@ -18,41 +18,43 @@ export function Background() {
         <div className="grid-bg animate-grid-pan absolute -inset-x-10 -top-10 bottom-0 h-[120%] opacity-70" />
       </div>
 
-      {/* ambient glows */}
-      <div
-        className="glow-blob animate-pulse-soft"
-        style={{
-          width: 640,
-          height: 640,
-          top: -200,
-          left: "8%",
-          background:
-            "radial-gradient(circle, rgba(59,108,255,0.30), transparent 65%)",
-        }}
-      />
-      <div
-        className="glow-blob animate-pulse-soft"
-        style={{
-          width: 560,
-          height: 560,
-          top: 80,
-          right: "-6%",
-          background:
-            "radial-gradient(circle, rgba(34,211,238,0.22), transparent 65%)",
-          animationDelay: "1.5s",
-        }}
-      />
-      <div
-        className="glow-blob"
-        style={{
-          width: 700,
-          height: 700,
-          bottom: -360,
-          left: "30%",
-          background:
-            "radial-gradient(circle, rgba(124,92,255,0.14), transparent 70%)",
-        }}
-      />
+      {/* ambient glows (softened automatically in light theme) */}
+      <div style={{ opacity: "var(--glow-opacity)" }}>
+        <div
+          className="glow-blob animate-pulse-soft"
+          style={{
+            width: 640,
+            height: 640,
+            top: -200,
+            left: "8%",
+            background:
+              "radial-gradient(circle, rgba(59,108,255,0.30), transparent 65%)",
+          }}
+        />
+        <div
+          className="glow-blob animate-pulse-soft"
+          style={{
+            width: 560,
+            height: 560,
+            top: 80,
+            right: "-6%",
+            background:
+              "radial-gradient(circle, rgba(34,211,238,0.22), transparent 65%)",
+            animationDelay: "1.5s",
+          }}
+        />
+        <div
+          className="glow-blob"
+          style={{
+            width: 700,
+            height: 700,
+            bottom: -360,
+            left: "30%",
+            background:
+              "radial-gradient(circle, rgba(124,92,255,0.14), transparent 70%)",
+          }}
+        />
+      </div>
 
       {/* top + bottom vignette for depth */}
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-bg to-transparent" />

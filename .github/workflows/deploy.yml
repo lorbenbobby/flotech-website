@@ -31,11 +31,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate social share image (public/og.png)
-        run: |
-          python3 -m pip install --quiet --break-system-packages pillow
-          python3 scripts/generate-og.py
-
       - name: Build static site
         run: npm run build
 

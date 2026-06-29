@@ -81,10 +81,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#060912",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f8fc" },
+    { media: "(prefers-color-scheme: dark)", color: "#060912" },
+  ],
   width: "device-width",
   initialScale: 1,
 };
+
+// Applies the saved theme (or OS preference) to <html> before first paint,
+// so there is no flash of the wrong theme. Falls back to dark.
+const themeInit = `(function(){try{var s=localStorage.getItem('theme');var d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 export default function RootLayout({
   children,
@@ -95,7 +102,11 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body>
         <Background />
         <Header />

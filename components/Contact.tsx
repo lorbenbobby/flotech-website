@@ -7,7 +7,7 @@ import { SITE, PROJECT_TYPES } from "@/lib/content";
 import { Reveal } from "./Reveal";
 
 const FIELD =
-  "w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-[0.95rem] text-ink placeholder:text-faint outline-none transition-colors duration-200 focus:border-cyan/50 focus:bg-white/[0.05]";
+  "w-full rounded-xl border border-hairline bg-surface px-4 py-3 text-[0.95rem] text-ink placeholder:text-faint outline-none transition-colors duration-200 focus:border-cyan/50 focus:bg-surface2";
 const LABEL = "mb-2 block text-[0.85rem] font-medium text-ink/90";
 const REQ = <span className="text-cyan">*</span>;
 
@@ -80,9 +80,9 @@ export function Contact() {
               <div className="mt-8 space-y-4">
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-colors duration-200 hover:border-cyan/40 hover:bg-white/[0.05]"
+                  className="group flex items-center gap-4 rounded-2xl border border-hairline bg-surface p-4 transition-colors duration-200 hover:border-cyan/40 hover:bg-surfaceHover"
                 >
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-white/10">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-hairline">
                     <Mail size={20} strokeWidth={1.8} />
                   </span>
                   <span className="min-w-0">
@@ -120,7 +120,7 @@ export function Contact() {
             <div className="glass relative rounded-3xl p-6 sm:p-8">
               {sent ? (
                 <div className="flex min-h-[420px] flex-col items-center justify-center text-center">
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-soft text-cyan ring-1 ring-white/10">
+                  <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-soft text-cyan ring-1 ring-hairline">
                     <BadgeCheck size={28} strokeWidth={1.8} />
                   </span>
                   <h3 className="mt-5 text-xl font-semibold text-ink">

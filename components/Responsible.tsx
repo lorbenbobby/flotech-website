@@ -62,7 +62,7 @@ export function Responsible() {
                   return (
                     <RevealChild key={item.title}>
                       <div className="flex gap-4">
-                        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-soft text-cyan ring-1 ring-white/10">
+                        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-soft text-cyan ring-1 ring-hairline">
                           <Icon size={18} strokeWidth={1.9} />
                         </span>
                         <div>

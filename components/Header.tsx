@@ -4,6 +4,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 import { NAV } from "@/lib/content";
 
 export function Header() {
@@ -63,7 +64,7 @@ export function Header() {
       <div
         className={`transition-colors duration-300 ${
           scrolled || open
-            ? "border-b border-white/10 bg-bg/80 backdrop-blur-xl"
+            ? "border-b border-hairline bg-bg/80 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent"
         }`}
       >
@@ -95,7 +96,7 @@ export function Header() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute inset-0 -z-10 rounded-full bg-white/5 ring-1 ring-white/10"
+                        className="absolute inset-0 -z-10 rounded-full bg-surface ring-1 ring-hairline"
                         transition={{ duration: reduce ? 0 : 0.3 }}
                       />
                     )}
@@ -106,23 +107,27 @@ export function Header() {
           </ul>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <ThemeToggle />
             <a href="#contact" className="btn-primary">
               Build With FloTech
               <ArrowRight size={16} strokeWidth={2.5} />
             </a>
           </div>
 
-          {/* Mobile toggle */}
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-ink lg:hidden"
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
-          >
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          {/* Mobile controls */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle />
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-hairline bg-surface text-ink"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? "Close menu" : "Open menu"}
+            >
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </nav>
       </div>
 
@@ -138,14 +143,14 @@ export function Header() {
             transition={{ duration: reduce ? 0 : 0.22 }}
             className="lg:hidden"
           >
-            <div className="container-x border-b border-white/10 bg-bg/95 pb-6 pt-2 backdrop-blur-xl">
+            <div className="container-x border-b border-hairline bg-bg/95 pb-6 pt-2 backdrop-blur-xl">
               <ul className="flex flex-col">
                 {NAV.map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
                       onClick={close}
-                      className="block rounded-lg px-2 py-3 text-base text-muted hover:bg-white/5 hover:text-ink"
+                      className="block rounded-lg px-2 py-3 text-base text-muted hover:bg-surfaceHover hover:text-ink"
                     >
                       {item.label}
                     </a>

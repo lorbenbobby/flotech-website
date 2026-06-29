@@ -56,7 +56,7 @@ export function UseCases() {
                   }`}
                 >
                   <span
-                    className={`grid place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105 ${
+                    className={`grid place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-hairline transition-transform duration-300 group-hover:scale-105 ${
                       feature ? "h-14 w-14" : "h-11 w-11"
                     }`}
                   >

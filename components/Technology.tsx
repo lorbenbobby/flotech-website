@@ -19,8 +19,8 @@ export function Technology() {
         />
 
         <Reveal>
-          <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
-            <div className="grid grid-cols-1 gap-px bg-white/[0.06] sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 overflow-hidden rounded-2xl border border-hairline">
+            <div className="grid grid-cols-1 gap-px bg-surface2 sm:grid-cols-2 lg:grid-cols-4">
               {TECH.map((item, i) => {
                 const Icon = item.icon;
                 return (
@@ -29,7 +29,7 @@ export function Technology() {
                     className="group relative bg-[#0a1020] p-5 transition-colors duration-300 hover:bg-[#0d1426]"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+                      <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-hairline transition-transform duration-300 group-hover:scale-105">
                         <Icon size={20} strokeWidth={1.8} />
                       </span>
                       <span className="font-mono text-[11px] text-faint">

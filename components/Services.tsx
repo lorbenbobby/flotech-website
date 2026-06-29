@@ -9,7 +9,7 @@ function ServiceCard({ s }: { s: ServiceItem }) {
     <RevealChild className="h-full">
       <article className="card group h-full">
         <div className="flex items-start justify-between">
-          <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-white/10 transition-transform duration-300 group-hover:scale-105">
+          <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-soft text-cyan ring-1 ring-hairline transition-transform duration-300 group-hover:scale-105">
             <Icon size={22} strokeWidth={1.8} />
           </span>
           <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
