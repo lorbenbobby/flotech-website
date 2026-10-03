@@ -17,8 +17,8 @@ W, H = 1200, 630
 # Brand palette (mirrors app/globals.css + tailwind.config.ts).
 BG_TOP = (8, 17, 31)
 BG_BOT = (4, 9, 17)
-CYAN = (34, 211, 238)
-BLUE = (88, 170, 255)
+CYAN = (90, 140, 255)
+BLUE = (59, 108, 255)
 WHITE = (255, 255, 255)
 MUTED = (143, 164, 188)
 INK = (6, 18, 31)
@@ -52,9 +52,8 @@ def rounded_mask(size, radius):
 
 
 def cube_icon(size):
-    """The FloTech mark: a rounded gradient tile with a 3D cube outline.
-
-    Geometry mirrors public/favicon.svg (a 40-unit viewBox), scaled to `size`.
+    """The FloTech mark: a rounded brand-blue tile with a solid, shaded
+    isometric block. Geometry mirrors app/icon.svg (a 40-unit viewBox).
     """
     ss = 4  # supersample for crisp edges
     s = size * ss
@@ -73,12 +72,12 @@ def cube_icon(size):
     def P(x, y):
         return (x * k, y * k)
 
-    lw = max(2, int(2 * k))
-    hexagon = [P(20, 8), P(31, 14), P(31, 26), P(20, 32), P(9, 26), P(9, 14)]
-    d.line(hexagon + [hexagon[0]], fill=INK, width=lw, joint="curve")
-    for seg in ([P(20, 8), P(20, 20)], [P(20, 20), P(31, 14)],
-                [P(20, 20), P(20, 32)], [P(20, 20), P(9, 14)]):
-        d.line(seg, fill=INK, width=lw, joint="curve")
+    top = [P(20, 8), P(31, 14), P(20, 20), P(9, 14)]
+    left = [P(9, 14), P(20, 20), P(20, 32), P(9, 26)]
+    right = [P(31, 14), P(20, 20), P(20, 32), P(31, 26)]
+    d.polygon(top, fill=(255, 255, 255))
+    d.polygon(left, fill=(205, 221, 255))
+    d.polygon(right, fill=(157, 184, 239))
 
     return tile.resize((size, size), Image.LANCZOS)
 
